@@ -2,8 +2,9 @@
   "name": "intro-nodejs-typescript",
   "version": "1.0.0",
   "description": "Introdução type-script",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node ./dist/app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,7 @@
   },
   "homepage": "https://github.com/ewertonjsilva/Intro-NodeJS-TypeScript#readme",
   "dependencies": {
-    "expres": "^0.0.5",
+    "express": "^4.19.2",
     "typescript": "^5.4.3"
   },
   "devDependencies": {
