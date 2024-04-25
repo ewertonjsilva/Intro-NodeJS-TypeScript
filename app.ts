@@ -9,6 +9,6 @@ app.use(indexRoutes);
 const porta = process.env.PORT || 3000;
 app.listen(porta); 
 
-console.log(`Servidor iniciado em: http://localhost:${porta}/`);
+console.log(`Servidor iniciado em: http://localhost:${porta}`);
 
 
