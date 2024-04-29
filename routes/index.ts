@@ -20,11 +20,18 @@ router.get('/', (req: Request, res: Response) => {
     res.json({success: true, customers});
 });
 
-router.post('/', (req, res) => {
+type PostBody = {
+    id: number,
+    name: string,
+    birthDate: string
+}
+
+router.post('/', (req: Request, res: Response) => {
+    const body = req.body as PostBody;
     const newCustomer : Customer = {
-        id: parseInt(req.body.id),
-        name: req.body.name,
-        birthDate: new Date(req.body.birthDate)
+        id: body.id,
+        name: body.name,
+        birthDate: new Date(body.birthDate)
     };
     customers.push(newCustomer);
     res.status(201).json(newCustomer);
